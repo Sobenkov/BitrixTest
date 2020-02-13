@@ -5,17 +5,22 @@
 
 <!DOCTYPE HTML>
 <head>
+<?php $APPLICATION->ShowHead() ?>
 <title><?php $APPLICATION->ShowTitle() ?></title>
 <?php
-   Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
-   Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-1.11.1.min.js');
+   Asset::getInstance()->addCss(DEFAULT_TEMPLATE_PATH . '/css/style.css');
+   Asset::getInstance()->addJs(DEFAULT_TEMPLATE_PATH . '/js/jquery-1.11.1.min.js');
+   Asset::getInstance()->addString('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">');
+   Asset::getInstance()->addString("<link href='//fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>");
+   Asset::getInstance()->addString("<link href='//fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>");
 ?>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link href='//fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+<div id="panel">
+   <?php $APPLICATION->ShowPanel()?>
+</div>
+
 <div class="header">
  <div class="header_top">
     <div class="wrap">
